@@ -1,0 +1,119 @@
+<div class="row">
+  <div class="main-login main-center">
+  <h5>Customer Details</h5>
+    <form class="" method="post" action="#">
+
+      <div class="form-group">
+        <label for="name" class="cols-sm-2 control-label">Your Name </label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+            <input type="text" class="form-control"  id="name"  placeholder="Enter your Name" [(ngModel)]="customerInfo.name" name="name" />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="mobile" class="cols-sm-2 control-label">mobile</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" name="mobile" id="mobile"  placeholder="Enter your mobile" [(ngModel)]="customerInfo.mobile"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+          <label for="city" class="cols-sm-2 control-label">city</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" name="city" id="city"  placeholder="Enter your city" [(ngModel)]="customerInfo.city"/>
+            </div>
+          </div>
+        </div>
+
+      <div class="form-group">
+        <label for="email" class="cols-sm-2 control-label">Your Email</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email" [(ngModel)]="customerInfo.email"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="password" class="cols-sm-2 control-label">Password</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+            <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+            <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="from-group">
+          <label for="note" class="cols-sm-2 control-label">Staff Service</label>
+
+          <div id="rating2" class="rating">
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+      </div>
+      <div class="from-group">
+          <label for="note" class="cols-sm-2 control-label">Staff Suggestion</label>
+
+          <div id="rating" class="rating">
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+      </div><div class="from-group">
+          <label for="note" class="cols-sm-2 control-label">Product fabric Quality</label>
+
+          <div id="rating3" class="rating">
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+      </div>
+      <!-- <div class="from-group">
+          <label for="note" class="cols-sm-2 control-label">User Rating</label>
+
+          <div id="rating1">
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+      </div> -->
+      <div class="form-group">
+          <label for="note" class="cols-sm-2 control-label">This registration request is as confrormation to subscribe sms offer</label>
+        </div>
+
+      <div class="form-group ">
+        <a  type="button" id="button" class="btn btn-primary btn-lg btn-block login-button" (click)="saveCustomerDetail(customerInfo)">Register</a>
+      </div>
+
+    </form>
+  </div>
+</div>
