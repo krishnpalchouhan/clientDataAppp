@@ -9,21 +9,43 @@
 
         <ion-item>
           <ion-label floating>Name</ion-label>
-          <ion-input type="text" [(ngModel)]="name"></ion-input>
+          <ion-input type="text" [(ngModel)]="fromData.name"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>City</ion-label>
-            <ion-input type="text" [(ngModel)]="city"></ion-input>
+            <ion-input type="text" [(ngModel)]="fromData.city"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Date of Birth</ion-label>
-          <ion-datetime displayFormat="DD/MMM" [(ngModel)]="Date" interface="interface"></ion-datetime>
+          <ion-datetime displayFormat="DD/MMM" [(ngModel)]="fromData.dob" interface="interface"></ion-datetime>
         </ion-item>
         <ion-item>
             <ion-label floating>Mobile</ion-label>
-            <ion-input type="tel" value="mobile" [(ngModel)]="mobile"></ion-input>
+            <ion-input type="tel" value="mobile" [(ngModel)]="fromData.mobile"></ion-input>
         </ion-item>
-        <ion-list radio-group [(ngModel)]="job">
+
+        <ion-list radio-group [(ngModel)]="fromData.gender">
+          <ion-list-header>
+            Occupation
+          </ion-list-header>
+          <ion-grid>
+              <ion-row>
+                <ion-col col-6>
+                    <ion-item>
+                        <ion-label>Male</ion-label>
+                        <ion-radio  value="male" ></ion-radio>
+                    </ion-item>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-item>
+                        <ion-label>Female</ion-label>
+                        <ion-radio value="female" ></ion-radio>
+                      </ion-item>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+      </ion-list>
+        <ion-list radio-group [(ngModel)]="fromData.occupation">
             <ion-list-header>
               Occupation
             </ion-list-header>
@@ -47,7 +69,7 @@
         <ion-list>
           <ion-item>
             <ion-label>Our Staff Service is</ion-label>
-            <ion-select [(ngModel)]="staff"  interface="action-sheet" >
+            <ion-select [(ngModel)]="fromData.staff"  interface="action-sheet" >
               <ion-option  value="poor">Poor</ion-option>
               <ion-option  value="normal">Normal</ion-option>
               <ion-option  value="average">Average</ion-option>
@@ -59,7 +81,7 @@
         <ion-list>
           <ion-item>
             <ion-label>Our Fabric Qulity is</ion-label>
-            <ion-select [(ngModel)]="fabric" interface="action-sheet" >
+            <ion-select [(ngModel)]="fromData.fabric" interface="action-sheet" >
               <ion-option  value="poor">Poor</ion-option>
               <ion-option  value="normal">Normal</ion-option>
               <ion-option  value="average">Average</ion-option>
@@ -71,7 +93,7 @@
         <ion-list>
           <ion-item>
             <ion-label>Our Collection is</ion-label>
-            <ion-select [(ngModel)]="collection" interface="action-sheet" >
+            <ion-select [(ngModel)]="fromData.collection" interface="action-sheet" >
               <ion-option  value="poor">Poor</ion-option>
               <ion-option  value="normal">Normal</ion-option>
               <ion-option  value="average">Average</ion-option>
@@ -85,7 +107,7 @@
       </ion-list>
       <ion-grid>
           <ion-row>
-            <ion-col col-4> <button ion-button color="secondary" full >Submit</button></ion-col>
+            <ion-col col-4> <button ion-button color="secondary" (click)="save()"  full >Submit</button></ion-col>
             <ion-col col-4><button ion-button color="danger" full >Submit</button></ion-col>
             <ion-col col-4><button ion-button full>Submit</button></ion-col>
           </ion-row>
