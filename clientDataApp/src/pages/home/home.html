@@ -26,7 +26,7 @@
 
         <ion-list radio-group [(ngModel)]="fromData.gender">
           <ion-list-header>
-            Occupation
+            Gender
           </ion-list-header>
           <ion-grid>
               <ion-row>
@@ -107,9 +107,9 @@
       </ion-list>
       <ion-grid>
           <ion-row>
-            <ion-col col-4> <button ion-button color="secondary" (click)="save()"  full >Submit</button></ion-col>
-            <ion-col col-4><button ion-button color="danger" full >Submit</button></ion-col>
-            <ion-col col-4><button ion-button full>Submit</button></ion-col>
+            <ion-col col-4> <button ion-button color="secondary" (click)="save('g')"  full >Submit</button></ion-col>
+            <ion-col col-4><button ion-button color="danger" (click)="save('r')" full >Submit</button></ion-col>
+            <ion-col col-4><button ion-button full (click)="save('b')" >Submit</button></ion-col>
           </ion-row>
       </ion-grid>
   <!-- <h2>Welcome to Ioniclklklklk!</h2>

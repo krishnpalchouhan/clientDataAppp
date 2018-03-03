@@ -35,7 +35,7 @@ export class HomePage {
     doj:k+""
     }
 
-  //this.ngOnInit();
+  //this.getData();
 
   }
 
@@ -44,13 +44,14 @@ export class HomePage {
     browser.show();
   }
 
-  ngOnInit() {
+  getData() {
     this.dataService.getPosts().subscribe((posts) => {
       console.log(posts);
       this.posts=posts;
     });
   }
-  save(){
+  save(rgb){
+    this.fromData.rgb=rgb;
    try{
     this.restService.saveData(this.fromData).subscribe(
       res=>{
